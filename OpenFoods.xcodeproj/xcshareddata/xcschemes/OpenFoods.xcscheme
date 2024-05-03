@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1430"
+   LastUpgradeVersion = "1530"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -27,16 +27,18 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "009C4C671D9F0CD600F0BC6C"
-            BuildableName = "OpenTweet.app"
-            BlueprintName = "OpenTweet"
-            ReferencedContainer = "container:OpenTweet.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "957DDAB02BE4F41300A22DB9"
+               BuildableName = "OpenFoodsTests.xctest"
+               BlueprintName = "OpenFoodsTests"
+               ReferencedContainer = "container:OpenFoods.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

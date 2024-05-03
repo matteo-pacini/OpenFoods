@@ -7,14 +7,22 @@
 //
 
 import UIKit
+import Swinject
 
-@UIApplicationMain
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-	var window: UIWindow?
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+    ) -> Bool {
+        
+        // Register dependencies
+
+        dependencyContainer.register(APIService.self) { _ in
+            APIServiceImplementation()
+        }.inObjectScope(.container)
+
         return true
     }
     
