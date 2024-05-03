@@ -19,6 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Register dependencies
 
+        guard NSClassFromString("XCTest") == nil else {
+            // Do not register dependencies if we're performing unit tests
+            return true
+        }
+
         dependencyContainer.register(APIService.self) { _ in
             APIServiceImplementation()
         }.inObjectScope(.container)
